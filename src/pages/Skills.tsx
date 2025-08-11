@@ -7,32 +7,37 @@ const Skills = () => {
     {
       title: "Frontend Development",
       icon: <Globe className="h-6 w-6" />,
-      skills: ["React", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Responsive Design"]
+      skills: ["HTML", "React.js", "Bootstrap", "Tailwind CSS"]
     },
     {
       title: "Backend Development", 
       icon: <Code className="h-6 w-6" />,
-      skills: ["Django", "Python", "Node.js", "REST APIs", "GraphQL", "Express.js"]
+      skills: ["Python", "Django", "Django REST Framework (DRF)"]
     },
     {
-      title: "Database & Tools",
+      title: "Database & ORM",
       icon: <Database className="h-6 w-6" />,
-      skills: ["SQL", "PostgreSQL", "MongoDB", "Git", "Docker", "AWS", "Linux"]
+      skills: ["SQLite", "MySQL", "Django ORM"]
     },
     {
-      title: "Development Tools",
+      title: "API Communication",
+      icon: <Globe className="h-6 w-6" />,
+      skills: ["RESTful APIs", "Postman"]
+    },
+    {
+      title: "Version Control",
+      icon: <Code className="h-6 w-6" />,
+      skills: ["Git", "GitHub"]
+    },
+    {
+      title: "Deployment",
       icon: <Wrench className="h-6 w-6" />,
-      skills: ["VS Code", "Figma", "Postman", "Jest", "Webpack", "Vite", "npm/yarn"]
+      skills: ["Render", "Netlify", "Vercel"]
     },
     {
-      title: "Soft Skills",
-      icon: <Users className="h-6 w-6" />,
-      skills: ["Problem Solving", "Team Collaboration", "Communication", "Project Management", "Agile/Scrum"]
-    },
-    {
-      title: "Learning & Growth",
-      icon: <Brain className="h-6 w-6" />,
-      skills: ["Continuous Learning", "Adaptability", "Code Reviews", "Mentoring", "Technical Writing"]
+      title: "Tools & IDEs",
+      icon: <Wrench className="h-6 w-6" />,
+      skills: ["Visual Studio Code (VS Code)", "Jupyter Notebook", "PyCharm"]
     }
   ];
 
@@ -81,15 +86,15 @@ const Skills = () => {
           <div className="grid md:grid-cols-3 gap-6">
             <Card className="p-6 text-center shadow-soft">
               <div className="text-3xl font-bold text-primary mb-2">Expert</div>
-              <p className="text-sm text-muted-foreground">React, JavaScript, HTML/CSS</p>
+              <p className="text-sm text-muted-foreground">HTML, React.js, Python, Django</p>
             </Card>
             <Card className="p-6 text-center shadow-soft">
               <div className="text-3xl font-bold text-primary mb-2">Advanced</div>
-              <p className="text-sm text-muted-foreground">Django, Python, SQL, TypeScript</p>
+              <p className="text-sm text-muted-foreground">Django REST Framework, MySQL, Git</p>
             </Card>
             <Card className="p-6 text-center shadow-soft">
               <div className="text-3xl font-bold text-primary mb-2">Intermediate</div>
-              <p className="text-sm text-muted-foreground">Node.js, MongoDB, AWS, Docker</p>
+              <p className="text-sm text-muted-foreground">Bootstrap, Tailwind CSS, SQLite</p>
             </Card>
           </div>
         </div>
