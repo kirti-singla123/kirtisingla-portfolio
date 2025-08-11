@@ -19,7 +19,7 @@ const Home = () => {
               <div>
                 <h1 className="text-5xl lg:text-6xl font-bold text-foreground leading-tight">
                   Hi, I'm{" "}
-                  <span className="text-primary">Your Name</span>
+                  <span className="text-primary">Kirti Singla</span>
                 </h1>
                 <p className="text-xl text-muted-foreground mt-4">
                   Full-Stack Developer & Problem Solver
@@ -27,9 +27,9 @@ const Home = () => {
               </div>
               
               <p className="text-lg text-foreground leading-relaxed max-w-lg">
-                Passionate developer with expertise in React, Django, and modern web technologies. 
-                I create efficient, scalable solutions and love turning complex problems into 
-                elegant code.
+                Dedicated web developer with strong expertise in React and Django. I focus on creating 
+                robust, user-friendly applications and thrive on turning complex requirements into 
+                streamlined solutions.
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -42,12 +42,6 @@ const Home = () => {
                   Download Resume
                 </Button>
                 
-                <Button variant="outline" size="lg" asChild>
-                  <a href="#contact">
-                    <Mail className="mr-2 h-5 w-5" />
-                    Get In Touch
-                  </a>
-                </Button>
               </div>
 
               <div className="flex space-x-4">
@@ -88,18 +82,17 @@ const Home = () => {
               <Card className="p-6 shadow-soft hover:shadow-elegant transition-all duration-300">
                 <h3 className="text-xl font-semibold mb-4 text-primary">Background</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  With a strong foundation in computer science and hands-on experience 
-                  building web applications, I bring both technical expertise and 
-                  creative problem-solving to every project.
+                  I build web applications using React, Django, and SQL. I enjoy solving problems 
+                  by writing clean and efficient code. I like working on projects that help users 
+                  and make a difference.
                 </p>
               </Card>
 
               <Card className="p-6 shadow-soft hover:shadow-elegant transition-all duration-300">
                 <h3 className="text-xl font-semibold mb-4 text-primary">What I'm Looking For</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  I'm seeking opportunities where I can contribute to meaningful projects, 
-                  collaborate with talented teams, and continue growing as a developer 
-                  in a dynamic environment.
+                  I am looking for a full-time job where I can learn new skills, work with a great team, 
+                  and grow as a developer.
                 </p>
               </Card>
             </div>
