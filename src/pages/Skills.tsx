@@ -80,24 +80,6 @@ const Skills = () => {
           ))}
         </div>
 
-        {/* Proficiency Levels */}
-        <div className="mt-16 max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-center mb-8">Proficiency Levels</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <Card className="p-6 text-center shadow-soft">
-              <div className="text-3xl font-bold text-primary mb-2">Expert</div>
-              <p className="text-sm text-muted-foreground">HTML, React.js, Python, Django</p>
-            </Card>
-            <Card className="p-6 text-center shadow-soft">
-              <div className="text-3xl font-bold text-primary mb-2">Advanced</div>
-              <p className="text-sm text-muted-foreground">Django REST Framework, MySQL, Git</p>
-            </Card>
-            <Card className="p-6 text-center shadow-soft">
-              <div className="text-3xl font-bold text-primary mb-2">Intermediate</div>
-              <p className="text-sm text-muted-foreground">Bootstrap, Tailwind CSS, SQLite</p>
-            </Card>
-          </div>
-        </div>
       </div>
     </div>
   );
