@@ -27,9 +27,7 @@ const Home = () => {
               </div>
               
               <p className="text-lg text-foreground leading-relaxed max-w-lg">
-                Dedicated web developer with strong expertise in React and Django. I focus on creating 
-                robust, user-friendly applications and thrive on turning complex requirements into 
-                streamlined solutions.
+                Dedicated Web Developer with expertise in React.js and Django, creating robust, user-friendly applications from complex requirements.
               </p>
 
               <div className="flex flex-wrap gap-4">
