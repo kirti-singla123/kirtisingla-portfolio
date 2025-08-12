@@ -1,10 +1,13 @@
 import { useState } from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { Mail, Phone, MapPin, Send, Github, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -12,16 +15,18 @@ const Contact = () => {
     name: "",
     email: "",
     subject: "",
-    message: ""
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -45,33 +50,33 @@ const Contact = () => {
       icon: <Mail className="h-5 w-5" />,
       label: "Email",
       value: "kirtisingla38231@gmail.com",
-      href: "mailto:kirtisingla38231@gmail.com"
+      href: "mailto:kirtisingla38231@gmail.com",
     },
     {
       icon: <Phone className="h-5 w-5" />,
       label: "Phone",
       value: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
+      href: "tel:+15551234567",
     },
     {
       icon: <MapPin className="h-5 w-5" />,
       label: "Location",
       value: "Toronto, Canada",
-      href: null
-    }
+      href: null,
+    },
   ];
 
   const socialLinks = [
     {
       icon: <Github className="h-5 w-5" />,
       label: "GitHub",
-      href: "https://github.com/kirti-singla123"
+      href: "https://github.com/kirti-singla123",
     },
     {
       icon: <Linkedin className="h-5 w-5" />,
-      label: "LinkedIn", 
-      href: "https://linkedin.com/in/kirti-singla-web-dev"
-    }
+      label: "LinkedIn",
+      href: "https://linkedin.com/in/kirti-singla-web-dev",
+    },
   ];
 
   return (
@@ -81,7 +86,7 @@ const Contact = () => {
         <div className="absolute inset-0 bg-gradient-primary opacity-10"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,hsl(var(--primary-glow)/0.1),transparent_50%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,hsl(var(--accent)/0.1),transparent_50%)]"></div>
-        
+
         <div className="container relative mx-auto px-6 py-20">
           <div className="text-center mb-16 animate-fade-in">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-primary rounded-full mb-8 shadow-elegant animate-float">
@@ -91,7 +96,8 @@ const Contact = () => {
               Open for Opportunities
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Feel free to contact me for job opportunities or to discuss how I can contribute. I look forward to connecting!
+              Feel free to contact me for job opportunities or to discuss how I
+              can contribute. I look forward to connecting!
             </p>
           </div>
         </div>
@@ -117,11 +123,10 @@ const Contact = () => {
                 </div>
               </CardHeader>
               <CardContent className="space-y-6">
-                {contactInfo.map((item, index) => (
-                  <div 
-                    key={item.label} 
+                {contactInfo.map((item) => (
+                  <div
+                    key={item.label}
                     className="flex items-center space-x-4 p-4 rounded-xl bg-gradient-subtle hover:bg-accent/50 transition-all duration-300 group/item"
-                    style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary group-hover/item:bg-primary group-hover/item:text-primary-foreground transition-all duration-300">
                       {item.icon}
@@ -129,7 +134,7 @@ const Contact = () => {
                     <div className="flex-1">
                       <p className="font-semibold text-foreground">{item.label}</p>
                       {item.href ? (
-                        <a 
+                        <a
                           href={item.href}
                           className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:underline"
                         >
@@ -170,14 +175,21 @@ const Contact = () => {
                       className="h-16 justify-start bg-gradient-subtle border-2 border-primary/20 hover:border-primary hover:bg-gradient-primary hover:text-primary-foreground hover:shadow-elegant transition-all duration-300 group/social"
                       style={{ animationDelay: `${index * 0.1}s` }}
                     >
-                      <a href={link.href} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-4">
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-4"
+                      >
                         <div className="w-8 h-8 flex items-center justify-center">
                           {link.icon}
                         </div>
                         <div className="text-left">
                           <div className="font-semibold text-lg">{link.label}</div>
                           <div className="text-sm opacity-70 group-hover/social:opacity-100 transition-opacity">
-                            {link.label === 'GitHub' ? 'View my repositories' : 'Connect professionally'}
+                            {link.label === "GitHub"
+                              ? "View my repositories"
+                              : "Connect professionally"}
                           </div>
                         </div>
                       </a>
@@ -186,29 +198,6 @@ const Contact = () => {
                 </div>
               </CardContent>
             </Card>
-          </div>
-
-          {/* Call to Action Section */}
-          <div className="mt-16 text-center animate-fade-in">
-            <div className="max-w-2xl mx-auto p-8 rounded-2xl bg-gradient-primary shadow-elegant">
-              <h3 className="text-2xl font-bold text-primary-foreground mb-4">
-                Ready to Work Together?
-              </h3>
-              <p className="text-primary-foreground/90 mb-6 text-lg">
-                I'm always excited to discuss new opportunities and collaborations.
-              </p>
-              <Button 
-                size="lg" 
-                variant="secondary"
-                className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 shadow-lg hover:shadow-xl transition-all duration-300"
-                asChild
-              >
-                <a href="mailto:kirtisingla38231@gmail.com" className="inline-flex items-center space-x-2">
-                  <Send className="h-5 w-5" />
-                  <span>Send me an email</span>
-                </a>
-              </Button>
-            </div>
           </div>
         </div>
       </div>
