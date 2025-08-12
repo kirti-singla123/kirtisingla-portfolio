@@ -6,7 +6,7 @@ import heroImage from "@/assets/hero-image.jpg";
 const Home = () => {
   const handleResumeDownload = () => {
     // In a real app, this would trigger a download of your actual resume PDF
-    window.open("/resume.pdf", "_blank");
+    window.open("/Kirti_Resume_Canada.pdf", "_blank");
   };
 
   return (
