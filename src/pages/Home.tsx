@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Download, Mail, Github, Linkedin } from "lucide-react";
+import { Eye, Download, Mail, Github, Linkedin } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
 
 const Home = () => {
@@ -37,7 +37,7 @@ const Home = () => {
                     onClick={handleResumeDownload}
                     className="bg-gradient-primary hover:shadow-elegant transition-all duration-300"
                      size="lg">
-                  <Download className="mr-2 h-5 w-5" />
+                  <Eye className="mr-2 h-5 w-5" />
                   Explore My Resume
                   </Button>
                 
