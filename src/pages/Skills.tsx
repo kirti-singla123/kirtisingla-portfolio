@@ -42,16 +42,11 @@ const Skills = () => {
   ];
 
   return (
-    <div 
-      className="min-h-screen pt-20"
-      style={{
-        background: "linear-gradient(135deg, #f0fdf4, #ecfdf5)"
-      }}
-    >
+    <div className="min-h-screen pt-20 bg-gray-50">
       <div className="container mx-auto px-6 py-20">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold mb-4 text-primary">Technical Skills</h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <h1 className="text-4xl font-bold text-blue-600 mb-4">Technical Skills</h1>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             A comprehensive overview of my technical expertise and the tools I use to build modern web applications.
           </p>
         </div>
@@ -60,21 +55,22 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <Card 
               key={category.title}
-              className="p-6 shadow-lg hover:shadow-2xl transition-all duration-300 animate-fade-in group bg-white/80 backdrop-blur-sm border border-teal-100"
+              className="p-6 shadow-md hover:shadow-lg transition-all duration-300 animate-fade-in group bg-white border border-gray-200"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex items-center mb-4">
-                <div className="text-teal-600 mr-3 group-hover:scale-110 transition-transform duration-300">
+                <div className="text-blue-500 mr-3 group-hover:scale-110 transition-transform duration-300">
                   {category.icon}
                 </div>
-                <h3 className="text-lg font-semibold text-teal-700">{category.title}</h3>
+                <h3 className="text-lg font-semibold text-gray-800">{category.title}</h3>
               </div>
               
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill) => (
                   <Badge 
                     key={skill} 
-                    className="bg-teal-100 text-teal-800 hover:bg-teal-200 transition-colors duration-200"
+                    variant="secondary"
+                    className="bg-blue-50 text-blue-700 hover:bg-blue-100 transition-colors duration-200"
                   >
                     {skill}
                   </Badge>
@@ -83,10 +79,10 @@ const Skills = () => {
             </Card>
           ))}
         </div>
-
       </div>
     </div>
   );
 };
 
 export default Skills;
+
