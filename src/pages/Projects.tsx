@@ -65,12 +65,15 @@ const Projects = () => {
               </CardHeader>
               
               <CardContent className="space-y-4">
-                {/* Render project image */}
+                {/* Render project image with lazy loading */}
                 <div className="rounded-lg overflow-hidden h-48">
                   <img
                     src={project.image}
                     alt={`${project.title} Screenshot`}
                     className="object-cover w-full h-full"
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="low"
                   />
                 </div>
 
