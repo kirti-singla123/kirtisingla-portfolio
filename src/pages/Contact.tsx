@@ -65,17 +65,12 @@ const Contact = () => {
     {
       icon: <Github className="h-5 w-5" />,
       label: "GitHub",
-      href: "https://github.com/yourusername"
+      href: "https://github.com/kirti-singla123"
     },
     {
       icon: <Linkedin className="h-5 w-5" />,
       label: "LinkedIn", 
-      href: "https://linkedin.com/in/yourprofile"
-    },
-    {
-      icon: <Mail className="h-5 w-5" />,
-      label: "Email",
-      href: "mailto:kirtisingla38231@gmail.com"
+      href: "https://linkedin.com/in/kirti-singla-web-dev"
     }
   ];
 
@@ -83,9 +78,9 @@ const Contact = () => {
     <div className="min-h-screen pt-20">
       <div className="container mx-auto px-6 py-20">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold mb-4">Get In Touch</h1>
+          <h1 className="text-4xl font-bold mb-4">Open for Opportunities</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Let's discuss opportunities, collaborations, or any questions you might have. I'm always excited to connect with fellow professionals.
+            Feel free to contact me for job opportunities or to discuss how I can contribute. I look forward to connecting!
           </p>
         </div>
 
