@@ -34,13 +34,12 @@ const Home = () => {
 
               <div className="flex flex-wrap gap-4">
                 <Button 
-                  onClick={handleResumeDownload}
-                  className="bg-gradient-primary hover:shadow-elegant transition-all duration-300"
-                  size="lg"
-                >
+                    onClick={handleResumeDownload}
+                    className="bg-gradient-primary hover:shadow-elegant transition-all duration-300"
+                     size="lg">
                   <Download className="mr-2 h-5 w-5" />
-                  Download Resume
-                </Button>
+                  Explore My Resume
+                  </Button>
                 
               </div>
 
