@@ -42,7 +42,7 @@ const Skills = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#eaf4ff] pt-20">
+    <div className="min-h-screen bg-[#d8bfd8] pt-20">
       <div className="container mx-auto px-6 py-20">
         {/* Heading */}
         <div className="text-center mb-16">
