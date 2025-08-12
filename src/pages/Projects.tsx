@@ -14,9 +14,9 @@ const Projects = () => {
       featured: true
     },
     {
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates, team collaboration features, and project tracking capabilities.",
-      technologies: ["React", "Node.js", "MongoDB", "Socket.io", "Express"],
+      title: "ToDoFlow – Task Management App",
+      description: "A clean and responsive task management tool with real-time updates, task persistence via localStorage, and features for adding, completing, and deleting tasks.",
+      technologies: ["React", "JavaScript (ES6+)", "HTML", "CSS", "localStorage", "react-router-dom"],
       liveUrl: "https://todoflow-six.vercel.app",
       image: "/ToDo.png"
     },
