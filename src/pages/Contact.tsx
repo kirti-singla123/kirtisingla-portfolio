@@ -82,7 +82,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-gradient-subtle">
       {/* Hero Section with Gradient Background */}
-      <div className="relative pt-20 pb-16 overflow-hidden">
+      <div className="relative pt-20 pb-10 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-primary opacity-10"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,hsl(var(--primary-glow)/0.1),transparent_50%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,hsl(var(--accent)/0.1),transparent_50%)]"></div>
