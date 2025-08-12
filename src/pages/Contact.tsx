@@ -89,9 +89,6 @@ const Contact = () => {
 
         <div className="container relative mx-auto px-6 py-20">
           <div className="text-center mb-10 animate-fade-in">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-primary rounded-full mb-8 shadow-elegant animate-float">
-              <Mail className="h-10 w-10 text-primary-foreground" />
-            </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
               Open for Opportunities
             </h1>
