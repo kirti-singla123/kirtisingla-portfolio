@@ -16,14 +16,14 @@ const Projects = () => {
     {
       title: "ToDoFlow – Task Management App",
       description: "A clean and responsive task management tool with real-time updates, task persistence via localStorage, and features for adding, completing, and deleting tasks.",
-      technologies: ["React", "JavaScript (ES6+)", "HTML", "CSS", "localStorage", "react-router-dom"],
+      technologies: ["React", "JavaScript (ES6+)", "HTML", "CSS", "LocalStorage", "React-router-dom"],
       liveUrl: "https://todoflow-six.vercel.app",
       image: "/ToDo.png"
     },
     {
-      title: "MovieHub",
-      description: "A responsive weather application that provides current conditions, forecasts, and weather maps using multiple APIs for comprehensive weather data.",
-      technologies: ["JavaScript", "Weather API", "Chart.js", "CSS3", "HTML5"],
+      title: "MovieHub – React Movie Wishlist App",
+      description: "A modern and responsive movie discovery platform that lets users browse trending films from TMDB, add favorites to a wishlist, and persist selections using localStorage.",
+      technologies: ["React", "JavaScript (ES6+)", "Bootstrap", "TMDB API", "React Context API", "LocalStorage", "HTML5", "CSS3"],,
       liveUrl: "https://popcornplanet.netlify.app", 
       image: "/MovieHub.png"
     }
