@@ -9,7 +9,7 @@ const Projects = () => {
       title: "E-Commerce Platform",
       description: "A full-stack e-commerce solution with user authentication, payment processing, and admin dashboard. Features include product management, shopping cart, and order tracking.",
       technologies: ["React", "Django", "PostgreSQL", "Stripe", "Tailwind CSS"],
-      liveUrl: "https://your-ecommerce-demo.com",
+      liveUrl: "https://creamy-com.onrender.com",
       image: "/api/placeholder/400/250",
       featured: true
     },
@@ -17,14 +17,14 @@ const Projects = () => {
       title: "Task Management App",
       description: "A collaborative task management application with real-time updates, team collaboration features, and project tracking capabilities.",
       technologies: ["React", "Node.js", "MongoDB", "Socket.io", "Express"],
-      liveUrl: "https://your-taskmanager-demo.com",
+      liveUrl: "https://todoflow-six.vercel.app",
       image: "/api/placeholder/400/250"
     },
     {
       title: "Weather Dashboard",
       description: "A responsive weather application that provides current conditions, forecasts, and weather maps using multiple APIs for comprehensive weather data.",
       technologies: ["JavaScript", "Weather API", "Chart.js", "CSS3", "HTML5"],
-      liveUrl: "https://your-weather-demo.com", 
+      liveUrl: "https://popcornplanet.netlify.app", 
       image: "/api/placeholder/400/250"
     }
   ];
