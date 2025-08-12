@@ -42,7 +42,7 @@ const Skills = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#e6f7f7] via-[#ccf0f0] to-[#e6f7f7] pt-20">
+    <div className="min-h-screen bg-[#f0faff] pt-20">
       <div className="container mx-auto px-6 py-20">
         {/* Heading */}
         <div className="text-center mb-16">
