@@ -7,8 +7,8 @@ const Projects = () => {
   const projects = [
     {
       title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution with user authentication, payment processing, and admin dashboard. Features include product management, shopping cart, and order tracking.",
-      technologies: ["React", "Django", "PostgreSQL", "Stripe", "Tailwind CSS"],
+      description: "A Django-powered ice cream shop where users can browse flavors, manage their cart, and place orders. Includes secure authentication, product browsing, and a responsive Bootstrap design.",
+      technologies: ["Python", "Django", "HTML", "CSS", "JavaScript", "Bootstrap", "SQLite", "PayPal Sandbox"],
       liveUrl: "https://creamy-com.onrender.com",
       image: "/homepage.png",
       featured: true
