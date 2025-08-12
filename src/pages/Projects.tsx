@@ -10,7 +10,7 @@ const Projects = () => {
       description: "A full-stack e-commerce solution with user authentication, payment processing, and admin dashboard. Features include product management, shopping cart, and order tracking.",
       technologies: ["React", "Django", "PostgreSQL", "Stripe", "Tailwind CSS"],
       liveUrl: "https://creamy-com.onrender.com",
-      image: "/api/placeholder/400/250",
+      image: "/homepage.png",
       featured: true
     },
     {
@@ -18,14 +18,14 @@ const Projects = () => {
       description: "A collaborative task management application with real-time updates, team collaboration features, and project tracking capabilities.",
       technologies: ["React", "Node.js", "MongoDB", "Socket.io", "Express"],
       liveUrl: "https://todoflow-six.vercel.app",
-      image: "/api/placeholder/400/250"
+      image: "/ToDo.png"
     },
     {
-      title: "Weather Dashboard",
+      title: "MovieHub",
       description: "A responsive weather application that provides current conditions, forecasts, and weather maps using multiple APIs for comprehensive weather data.",
       technologies: ["JavaScript", "Weather API", "Chart.js", "CSS3", "HTML5"],
       liveUrl: "https://popcornplanet.netlify.app", 
-      image: "/api/placeholder/400/250"
+      image: "/MovieHub.png"
     }
   ];
 
