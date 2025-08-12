@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Code, Database, Globe, Wrench, Users, Brain } from "lucide-react";
+import { Code, Database, Globe, Wrench } from "lucide-react";
 
 const Skills = () => {
   const skillCategories = [
@@ -42,10 +42,15 @@ const Skills = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-20">
+    <div 
+      className="min-h-screen pt-20"
+      style={{
+        background: "linear-gradient(135deg, #f0fdf4, #ecfdf5)"
+      }}
+    >
       <div className="container mx-auto px-6 py-20">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold mb-4">Technical Skills</h1>
+          <h1 className="text-4xl font-bold mb-4 text-primary">Technical Skills</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             A comprehensive overview of my technical expertise and the tools I use to build modern web applications.
           </p>
@@ -55,22 +60,21 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <Card 
               key={category.title}
-              className="p-6 shadow-soft hover:shadow-elegant transition-all duration-300 animate-fade-in group"
+              className="p-6 shadow-lg hover:shadow-2xl transition-all duration-300 animate-fade-in group bg-white/80 backdrop-blur-sm border border-teal-100"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex items-center mb-4">
-                <div className="text-primary mr-3 group-hover:scale-110 transition-transform duration-300">
+                <div className="text-teal-600 mr-3 group-hover:scale-110 transition-transform duration-300">
                   {category.icon}
                 </div>
-                <h3 className="text-lg font-semibold">{category.title}</h3>
+                <h3 className="text-lg font-semibold text-teal-700">{category.title}</h3>
               </div>
               
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill) => (
                   <Badge 
                     key={skill} 
-                    variant="secondary"
-                    className="hover:bg-accent transition-colors duration-200"
+                    className="bg-teal-100 text-teal-800 hover:bg-teal-200 transition-colors duration-200"
                   >
                     {skill}
                   </Badge>
