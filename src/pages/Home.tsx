@@ -61,7 +61,7 @@ const Home = () => {
             <div className="relative animate-slide-up">
               <div className="relative rounded-2xl overflow-hidden shadow-elegant">
                 <img 
-                  src={kirti_singla.png} 
+                  src={kirtisingla-portfolio/src/assets/kirti_singla.png} 
                   alt="Professional workspace" 
                   className="w-full h-auto object-cover"
                 />
