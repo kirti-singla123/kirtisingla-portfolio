@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Image } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 const Projects = () => {
   const projects = [
@@ -65,10 +65,13 @@ const Projects = () => {
               </CardHeader>
               
               <CardContent className="space-y-4">
-                {/* Project Image Placeholder */}
-                <div className="bg-muted rounded-lg h-48 flex items-center justify-center group-hover:bg-accent transition-colors duration-300">
-                  <Image className="h-12 w-12 text-muted-foreground" />
-                  <span className="ml-2 text-muted-foreground">Project Screenshot</span>
+                {/* Render project image */}
+                <div className="rounded-lg overflow-hidden h-48">
+                  <img
+                    src={project.image}
+                    alt={`${project.title} Screenshot`}
+                    className="object-cover w-full h-full"
+                  />
                 </div>
 
                 {/* Technologies */}
@@ -80,7 +83,7 @@ const Projects = () => {
                   ))}
                 </div>
 
-                {/* Only Live Demo Button */}
+                {/* Live Demo Button */}
                 <div className="flex gap-3 pt-2">
                   <Button size="sm" asChild className="bg-gradient-primary">
                     <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
