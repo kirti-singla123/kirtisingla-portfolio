@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Github, ExternalLink, Image } from "lucide-react";
+import { ExternalLink, Image } from "lucide-react";
 
 const Projects = () => {
   const projects = [
@@ -9,7 +9,6 @@ const Projects = () => {
       title: "E-Commerce Platform",
       description: "A full-stack e-commerce solution with user authentication, payment processing, and admin dashboard. Features include product management, shopping cart, and order tracking.",
       technologies: ["React", "Django", "PostgreSQL", "Stripe", "Tailwind CSS"],
-      githubUrl: "https://github.com/yourusername/ecommerce-platform",
       liveUrl: "https://your-ecommerce-demo.com",
       image: "/api/placeholder/400/250",
       featured: true
@@ -18,7 +17,6 @@ const Projects = () => {
       title: "Task Management App",
       description: "A collaborative task management application with real-time updates, team collaboration features, and project tracking capabilities.",
       technologies: ["React", "Node.js", "MongoDB", "Socket.io", "Express"],
-      githubUrl: "https://github.com/yourusername/task-manager",
       liveUrl: "https://your-taskmanager-demo.com",
       image: "/api/placeholder/400/250"
     },
@@ -26,32 +24,7 @@ const Projects = () => {
       title: "Weather Dashboard",
       description: "A responsive weather application that provides current conditions, forecasts, and weather maps using multiple APIs for comprehensive weather data.",
       technologies: ["JavaScript", "Weather API", "Chart.js", "CSS3", "HTML5"],
-      githubUrl: "https://github.com/yourusername/weather-dashboard",
       liveUrl: "https://your-weather-demo.com", 
-      image: "/api/placeholder/400/250"
-    },
-    {
-      title: "Blog CMS",
-      description: "A content management system for bloggers with markdown support, SEO optimization, and analytics dashboard for tracking engagement.",
-      technologies: ["Django", "Python", "SQLite", "Bootstrap", "TinyMCE"],
-      githubUrl: "https://github.com/yourusername/blog-cms",
-      liveUrl: "https://your-blog-demo.com",
-      image: "/api/placeholder/400/250"
-    },
-    {
-      title: "Portfolio Website",
-      description: "This very portfolio website built with modern React and beautiful animations. Fully responsive and optimized for performance.",
-      technologies: ["React", "TypeScript", "Tailwind CSS", "Vite", "Lovable"],
-      githubUrl: "https://github.com/yourusername/portfolio",
-      liveUrl: "https://your-portfolio.com",
-      image: "/api/placeholder/400/250"
-    },
-    {
-      title: "Data Visualization Tool",
-      description: "Interactive charts and graphs for data analysis with filtering, export capabilities, and real-time data updates from external APIs.",
-      technologies: ["React", "D3.js", "Python", "FastAPI", "Chart.js"],
-      githubUrl: "https://github.com/yourusername/data-viz",
-      liveUrl: "https://your-dataviz-demo.com",
       image: "/api/placeholder/400/250"
     }
   ];
@@ -107,14 +80,8 @@ const Projects = () => {
                   ))}
                 </div>
 
-                {/* Action Buttons */}
+                {/* Only Live Demo Button */}
                 <div className="flex gap-3 pt-2">
-                  <Button variant="outline" size="sm" asChild>
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                      <Github className="h-4 w-4 mr-2" />
-                      Code
-                    </a>
-                  </Button>
                   <Button size="sm" asChild className="bg-gradient-primary">
                     <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="h-4 w-4 mr-2" />
@@ -125,22 +92,6 @@ const Projects = () => {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center mt-16">
-          <Card className="p-8 max-w-2xl mx-auto shadow-soft">
-            <h2 className="text-2xl font-bold mb-4">Want to see more?</h2>
-            <p className="text-muted-foreground mb-6">
-              Check out my GitHub profile for additional projects and contributions to open source.
-            </p>
-            <Button asChild className="bg-gradient-primary">
-              <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
-                <Github className="h-5 w-5 mr-2" />
-                View GitHub Profile
-              </a>
-            </Button>
-          </Card>
         </div>
       </div>
     </div>
