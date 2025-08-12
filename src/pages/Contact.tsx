@@ -88,7 +88,7 @@ const Contact = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,hsl(var(--accent)/0.1),transparent_50%)]"></div>
 
         <div className="container relative mx-auto px-6 py-20">
-          <div className="text-center mb-10 animate-fade-in">
+          <div className="text-center mb-16 animate-fade-in">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-primary rounded-full mb-8 shadow-elegant animate-float">
               <Mail className="h-10 w-10 text-primary-foreground" />
             </div>
