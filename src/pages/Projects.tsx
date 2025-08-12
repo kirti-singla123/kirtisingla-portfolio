@@ -11,7 +11,7 @@ const Projects = () => {
       technologies: ["React", "Django", "PostgreSQL", "Stripe", "Tailwind CSS"],
       githubUrl: "https://github.com/yourusername/ecommerce-platform",
       liveUrl: "https://your-ecommerce-demo.com",
-      image: "/api/placeholder/400/250",
+      image: "/homepage.png",
       featured: true
     },
     {
