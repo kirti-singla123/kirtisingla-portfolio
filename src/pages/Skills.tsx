@@ -42,28 +42,34 @@ const Skills = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#e6f7f7] pt-20">
-      {/* ^ This is the same teal-ish background from contact page */}
+    <div className="min-h-screen bg-gradient-to-b from-[#e6f7f7] via-[#ccf0f0] to-[#e6f7f7] pt-20">
       <div className="container mx-auto px-6 py-20">
+        {/* Heading */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold mb-4">Technical Skills</h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A comprehensive overview of my technical expertise and the tools I use to build modern web applications.
+          <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-teal-600 to-teal-400 bg-clip-text text-transparent">
+            Technical Skills
+          </h1>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            A comprehensive overview of my technical expertise and the tools I
+            use to build modern web applications.
           </p>
         </div>
 
+        {/* Skill Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {skillCategories.map((category, index) => (
             <Card
               key={category.title}
-              className="p-6 shadow-soft hover:shadow-elegant transition-all duration-300 animate-fade-in group"
+              className="p-6 shadow-md hover:shadow-lg border border-teal-100 transition-all duration-300 animate-fade-in group bg-white/80 backdrop-blur-sm"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex items-center mb-4">
-                <div className="text-primary mr-3 group-hover:scale-110 transition-transform duration-300">
+                <div className="text-teal-600 mr-3 group-hover:scale-110 transition-transform duration-300">
                   {category.icon}
                 </div>
-                <h3 className="text-lg font-semibold">{category.title}</h3>
+                <h3 className="text-lg font-semibold text-gray-800">
+                  {category.title}
+                </h3>
               </div>
 
               <div className="flex flex-wrap gap-2">
@@ -71,7 +77,7 @@ const Skills = () => {
                   <Badge
                     key={skill}
                     variant="secondary"
-                    className="hover:bg-accent transition-colors duration-200"
+                    className="bg-teal-50 text-teal-700 border border-teal-200 hover:bg-teal-100 hover:text-teal-800 transition-colors duration-200"
                   >
                     {skill}
                   </Badge>
