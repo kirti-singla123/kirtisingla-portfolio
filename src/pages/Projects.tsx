@@ -23,7 +23,7 @@ const Projects = () => {
     {
       title: "MovieHub – React Movie Wishlist App",
       description: "A modern and responsive movie discovery platform that lets users browse trending films from TMDB, add favorites to a wishlist, and persist selections using localStorage.",
-      technologies: ["React", "JavaScript (ES6+)", "Bootstrap", "TMDB API", "React Context API", "LocalStorage", "HTML5", "CSS3"],,
+      technologies: ["React", "JavaScript (ES6+)", "Bootstrap", "TMDB API", "React Context API", "LocalStorage", "HTML5", "CSS3"],
       liveUrl: "https://popcornplanet.netlify.app", 
       image: "/MovieHub.png"
     }
