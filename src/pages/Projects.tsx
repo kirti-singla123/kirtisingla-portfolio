@@ -1,78 +1,146 @@
-import React from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Github, ExternalLink, Image } from "lucide-react";
 
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Website",
-      image: "/E-Commerce.PNG",
-      link: "https://creamy-com.onrender.com"
+      title: "E-Commerce Platform",
+      description: "A full-stack e-commerce solution with user authentication, payment processing, and admin dashboard. Features include product management, shopping cart, and order tracking.",
+      technologies: ["React", "Django", "PostgreSQL", "Stripe", "Tailwind CSS"],
+      githubUrl: "https://github.com/yourusername/ecommerce-platform",
+      liveUrl: "https://your-ecommerce-demo.com",
+      image: "/api/placeholder/400/250",
+      featured: true
     },
     {
-      title: "To-Do Application",
-      image: "/ToDo.jpg",
-      link: "https://todoflow-six.vercel.app"
+      title: "Task Management App",
+      description: "A collaborative task management application with real-time updates, team collaboration features, and project tracking capabilities.",
+      technologies: ["React", "Node.js", "MongoDB", "Socket.io", "Express"],
+      githubUrl: "https://github.com/yourusername/task-manager",
+      liveUrl: "https://your-taskmanager-demo.com",
+      image: "/api/placeholder/400/250"
     },
     {
-      title: "Movie Hub App",
-      image: "/MovieHub.png",
-      link: "https://popcornplanet.netlify.app"
+      title: "Weather Dashboard",
+      description: "A responsive weather application that provides current conditions, forecasts, and weather maps using multiple APIs for comprehensive weather data.",
+      technologies: ["JavaScript", "Weather API", "Chart.js", "CSS3", "HTML5"],
+      githubUrl: "https://github.com/yourusername/weather-dashboard",
+      liveUrl: "https://your-weather-demo.com", 
+      image: "/api/placeholder/400/250"
     },
     {
-      title: "Portfolio Website Design",
-      image: "/Portfolio.png",
-      link: null
+      title: "Blog CMS",
+      description: "A content management system for bloggers with markdown support, SEO optimization, and analytics dashboard for tracking engagement.",
+      technologies: ["Django", "Python", "SQLite", "Bootstrap", "TinyMCE"],
+      githubUrl: "https://github.com/yourusername/blog-cms",
+      liveUrl: "https://your-blog-demo.com",
+      image: "/api/placeholder/400/250"
     },
     {
-      title: "Responsive Layout",
-      image: "/responsive.jpeg",
-      link: null
+      title: "Portfolio Website",
+      description: "This very portfolio website built with modern React and beautiful animations. Fully responsive and optimized for performance.",
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Vite", "Lovable"],
+      githubUrl: "https://github.com/yourusername/portfolio",
+      liveUrl: "https://your-portfolio.com",
+      image: "/api/placeholder/400/250"
     },
     {
-      title: "Landing Page Design",
-      image: "/homepage.PNG",
-      link: null
+      title: "Data Visualization Tool",
+      description: "Interactive charts and graphs for data analysis with filtering, export capabilities, and real-time data updates from external APIs.",
+      technologies: ["React", "D3.js", "Python", "FastAPI", "Chart.js"],
+      githubUrl: "https://github.com/yourusername/data-viz",
+      liveUrl: "https://your-dataviz-demo.com",
+      image: "/api/placeholder/400/250"
     }
   ];
 
   return (
     <div className="min-h-screen pt-20">
-      <div className="container mx-auto px-8 py-20 max-w-7xl text-center">
-        <h2 className="text-4xl font-bold mb-4 text-primary">
-          Turning Ideas into Interactive Websites
-        </h2>
-        <p className="text-base mt-0 mb-12 text-muted-foreground max-w-2xl mx-auto">
-          These projects show my passion for clean design, development, and smooth user experiences.
-        </p>
+      <div className="container mx-auto px-6 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold mb-4">Featured Projects</h1>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            A showcase of my best work demonstrating various technologies and problem-solving approaches.
+          </p>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {projects.map((project, index) => (
-            <div 
+            <Card 
               key={project.title}
-              className="rounded-lg overflow-hidden shadow-soft bg-card hover:shadow-elegant transition-all duration-300 animate-fade-in"
+              className={`shadow-soft hover:shadow-elegant transition-all duration-300 animate-fade-in group ${
+                project.featured ? 'lg:col-span-2' : ''
+              }`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {project.link && (
-                <a 
-                  href={project.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-primary hover:text-primary/80 text-sm block mb-3 p-3 pb-0 transition-colors"
-                >
-                  🌐 Open Website
-                </a>
-              )}
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-48 object-cover block"
-              />
-              <div className="p-3">
-                <div className="text-base text-foreground font-medium">
-                  {project.title}
+              <CardHeader className="pb-3">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <CardTitle className="text-xl mb-2 group-hover:text-primary transition-colors">
+                      {project.title}
+                      {project.featured && (
+                        <Badge className="ml-2 bg-gradient-primary">Featured</Badge>
+                      )}
+                    </CardTitle>
+                    <CardDescription className="text-sm leading-relaxed">
+                      {project.description}
+                    </CardDescription>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </CardHeader>
+              
+              <CardContent className="space-y-4">
+                {/* Project Image Placeholder */}
+                <div className="bg-muted rounded-lg h-48 flex items-center justify-center group-hover:bg-accent transition-colors duration-300">
+                  <Image className="h-12 w-12 text-muted-foreground" />
+                  <span className="ml-2 text-muted-foreground">Project Screenshot</span>
+                </div>
+
+                {/* Technologies */}
+                <div className="flex flex-wrap gap-2">
+                  {project.technologies.map((tech) => (
+                    <Badge key={tech} variant="outline" className="text-xs">
+                      {tech}
+                    </Badge>
+                  ))}
+                </div>
+
+                {/* Action Buttons */}
+                <div className="flex gap-3 pt-2">
+                  <Button variant="outline" size="sm" asChild>
+                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                      <Github className="h-4 w-4 mr-2" />
+                      Code
+                    </a>
+                  </Button>
+                  <Button size="sm" asChild className="bg-gradient-primary">
+                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="h-4 w-4 mr-2" />
+                      Live Demo
+                    </a>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
           ))}
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center mt-16">
+          <Card className="p-8 max-w-2xl mx-auto shadow-soft">
+            <h2 className="text-2xl font-bold mb-4">Want to see more?</h2>
+            <p className="text-muted-foreground mb-6">
+              Check out my GitHub profile for additional projects and contributions to open source.
+            </p>
+            <Button asChild className="bg-gradient-primary">
+              <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+                <Github className="h-5 w-5 mr-2" />
+                View GitHub Profile
+              </a>
+            </Button>
+          </Card>
         </div>
       </div>
     </div>
