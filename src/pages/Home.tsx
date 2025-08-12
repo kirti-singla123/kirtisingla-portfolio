@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Eye, Download, Mail, Github, Linkedin } from "lucide-react";
-import heroImage from "@/assets/hero-image.jpg";
+import kirti_singla from "@/assets/kirti_singla.png";
 
 const Home = () => {
   const handleResumeDownload = () => {
@@ -60,7 +60,7 @@ const Home = () => {
             <div className="relative animate-slide-up">
               <div className="relative rounded-2xl overflow-hidden shadow-elegant">
                 <img 
-                  src={heroImage} 
+                  src={kirti_singla} 
                   alt="Professional workspace" 
                   className="w-full h-auto object-cover"
                 />
