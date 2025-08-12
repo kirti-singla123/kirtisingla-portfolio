@@ -30,43 +30,45 @@ const Projects = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen pt-20 bg-gray-50">
       <div className="container mx-auto px-6 py-20">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold mb-4">Featured Projects</h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <h1 className="text-5xl font-extrabold mb-4 text-gray-900">Featured Projects</h1>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             A showcase of my best work demonstrating various technologies and problem-solving approaches.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-10 max-w-6xl mx-auto">
           {projects.map((project, index) => (
-            <Card 
+            <Card
               key={project.title}
-              className={`shadow-soft hover:shadow-elegant transition-all duration-300 animate-fade-in group ${
-                project.featured ? 'lg:col-span-2' : ''
+              className={`shadow-lg hover:shadow-2xl transition-shadow duration-300 rounded-2xl overflow-hidden group ${
+                project.featured ? "lg:col-span-2" : ""
               }`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <CardHeader className="pb-3">
+              <CardHeader className="pb-3 px-6 pt-6">
                 <div className="flex items-start justify-between">
                   <div>
-                    <CardTitle className="text-xl mb-2 group-hover:text-primary transition-colors">
+                    <CardTitle className="text-2xl font-semibold mb-2 group-hover:text-teal-600 transition-colors">
                       {project.title}
                       {project.featured && (
-                        <Badge className="ml-2 bg-gradient-primary">Featured</Badge>
+                        <Badge className="ml-3 bg-gradient-to-r from-teal-400 to-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                          Featured
+                        </Badge>
                       )}
                     </CardTitle>
-                    <CardDescription className="text-sm leading-relaxed">
+                    <CardDescription className="text-sm text-gray-700 leading-relaxed">
                       {project.description}
                     </CardDescription>
                   </div>
                 </div>
               </CardHeader>
-              
-              <CardContent className="space-y-4">
-                {/* Render project image with lazy loading */}
-                <div className="rounded-lg overflow-hidden h-48">
+
+              <CardContent className="space-y-6 px-6 pb-6">
+                {/* Project image */}
+                <div className="rounded-xl overflow-hidden h-56 shadow-md group-hover:shadow-xl transition-shadow duration-300">
                   <img
                     src={project.image}
                     alt={`${project.title} Screenshot`}
@@ -78,19 +80,27 @@ const Projects = () => {
                 </div>
 
                 {/* Technologies */}
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-3">
                   {project.technologies.map((tech) => (
-                    <Badge key={tech} variant="outline" className="text-xs">
+                    <Badge
+                      key={tech}
+                      variant="outline"
+                      className="text-xs px-3 py-1 rounded-full border-gray-300 text-gray-700"
+                    >
                       {tech}
                     </Badge>
                   ))}
                 </div>
 
                 {/* Live Demo Button */}
-                <div className="flex gap-3 pt-2">
-                  <Button size="sm" asChild className="bg-gradient-primary">
-                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="h-4 w-4 mr-2" />
+                <div className="flex gap-4 pt-4">
+                  <Button
+                    size="sm"
+                    asChild
+                    className="bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700 shadow-lg"
+                  >
+                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center">
+                      <ExternalLink className="h-5 w-5 mr-2" />
                       Live Demo
                     </a>
                   </Button>
