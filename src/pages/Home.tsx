@@ -63,7 +63,7 @@ const Home = () => {
 
             {/* Right Image */}
             <div className="relative flex justify-center mt-10 lg:mt-0 animate-slide-up">
-              <div className="relative w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 rounded-full overflow-hidden shadow-elegant">
+              <div className="relative w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 rounded-full overflow-hidden shadow-elegant bg-blue-50">
                 <img
                   src={kirti_singla}
                   alt="Professional workspace"
