@@ -4,12 +4,12 @@ export default function SimpleNavbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-md px-4 py-3 flex items-center justify-between">
+    <nav className="bg-white shadow-md px-4 py-3 flex items-center justify-between relative">
       <div className="text-xl font-bold">Kirti Singla</div>
 
       {/* Hamburger button */}
       <button
-        className="md:hidden p-2 rounded-md focus:outline-none"
+        className="md:hidden p-2 rounded-md focus:outline-none z-20"
         aria-label="Toggle menu"
         onClick={() => setMenuOpen(!menuOpen)}
       >
@@ -49,6 +49,7 @@ export default function SimpleNavbar() {
         className={`absolute top-full left-0 w-full bg-white shadow-md md:static md:flex md:w-auto md:shadow-none ${
           menuOpen ? "block" : "hidden"
         }`}
+        style={{ zIndex: 10 }}
       >
         {["Home", "Projects", "Contact", "Skills"].map((item) => (
           <li key={item} className="border-b border-gray-200 md:border-none">
