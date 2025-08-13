@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import { badge } from "@/components/ui/badge";
 import { Code, Database, Globe, Wrench } from "lucide-react";
 
 const Skills = () => {
