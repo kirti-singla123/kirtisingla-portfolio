@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-subtle">
+      <section className="relative overflow-hidden bg-[#B0E0F5]">
         <div className="container mx-auto px-6 py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Text */}
@@ -63,7 +63,7 @@ const Home = () => {
 
             {/* Right Image */}
             <div className="relative flex justify-center mt-10 lg:mt-0 animate-slide-up">
-              <div className="relative w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 rounded-full overflow-hidden shadow-elegant bg-blue-50">
+              <div className="relative w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 rounded-full overflow-hidden shadow-elegant bg-[#B0E0F5]">
                 <img
                   src={kirti_singla}
                   alt="Professional workspace"
@@ -76,9 +76,8 @@ const Home = () => {
         </div>
       </section>
 
-
       {/* About Section */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl sm:text-3xl font-bold text-center mb-12">
