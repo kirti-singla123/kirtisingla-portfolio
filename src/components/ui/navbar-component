@@ -1,0 +1,67 @@
+import React, { useState } from "react";
+
+export default function SimpleNavbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  return (
+    <nav className="bg-white shadow-md px-4 py-3 flex items-center justify-between">
+      <div className="text-xl font-bold">Kirti Singla</div>
+
+      {/* Hamburger button */}
+      <button
+        className="md:hidden p-2 rounded-md focus:outline-none"
+        aria-label="Toggle menu"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        {menuOpen ? (
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        ) : (
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        )}
+      </button>
+
+      {/* Menu links */}
+      <ul
+        className={`absolute top-full left-0 w-full bg-white shadow-md md:static md:flex md:w-auto md:shadow-none ${
+          menuOpen ? "block" : "hidden"
+        }`}
+      >
+        {["Home", "Projects", "Contact", "Skills"].map((item) => (
+          <li key={item} className="border-b border-gray-200 md:border-none">
+            <a
+              href={`#${item.toLowerCase()}`}
+              className="block px-4 py-2 hover:bg-gray-100"
+              onClick={() => setMenuOpen(false)} // close menu on link click
+            >
+              {item}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+}
