@@ -1,5 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { badge } from "@/components/ui/badge";
 import { ExternalLink } from "lucide-react";
 
 const Projects = () => {
