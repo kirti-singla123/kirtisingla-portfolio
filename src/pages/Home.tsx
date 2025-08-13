@@ -42,7 +42,7 @@ const Home = () => {
               <div className="flex justify-center lg:justify-start space-x-4 mt-2">
                 <Button variant="ghost" size="sm" asChild>
                   <a
-                    href="https://github.com"
+                    href="https://github.com/kirti-singla123"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -51,7 +51,7 @@ const Home = () => {
                 </Button>
                 <Button variant="ghost" size="sm" asChild>
                   <a
-                    href="https://linkedin.com"
+                    href="https://linkedin.com/in/kirti-singla-web-dev"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
