@@ -8,7 +8,7 @@ import Home from "./pages/Home";
 import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
-import Navbar-component from "./components/ui/Navbar-component";
+import Navbarcomponent from "./components/ui/Navbarcomponent";
 
 import NotFound from "./pages/NotFound";
 
