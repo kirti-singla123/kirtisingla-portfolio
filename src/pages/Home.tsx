@@ -10,65 +10,71 @@ const Home = () => {
 
   return (
     <div className="min-h-screen pt-20">
-  {/* Hero Section */}
-  <section className="relative overflow-hidden bg-blue-50">
-    <div className="container mx-auto px-6 py-20">
-      <div className="grid lg:grid-cols-2 gap-12 items-center">
-        {/* Intro Text */}
-        <div className="space-y-8 animate-fade-in">
-          <div>
-            <h1 className="text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-              Hi, I'm <span className="text-primary">Kirti Singla</span>
-            </h1>
-            <p className="text-xl text-muted-foreground mt-4">
-              Full-Stack Developer & Problem Solver
-            </p>
-          </div>
-          
-          <p className="text-lg text-foreground leading-relaxed max-w-lg">
-            Dedicated Web Developer with expertise in React.js and Django. Passionate about learning, problem-solving, and building user-friendly applications from complex requirements.
-          </p>
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-subtle">
+        <div className="container mx-auto px-6 py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Text */}
+            <div className="space-y-8 animate-fade-in text-center lg:text-left">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+                Hi, I'm <span className="text-primary">Kirti Singla</span>
+              </h1>
+              <p className="text-lg sm:text-xl text-muted-foreground mt-4">
+                Full-Stack Developer & Problem Solver
+              </p>
+              <p className="text-base sm:text-lg text-foreground leading-relaxed max-w-lg mx-auto lg:mx-0">
+                Dedicated Web Developer with expertise in React.js and Django.
+                Passionate about learning, problem-solving, and building
+                user-friendly applications.
+              </p>
 
-          <div className="flex flex-wrap gap-4">
-            <Button 
-              onClick={handleResumeDownload}
-              className="bg-gradient-primary hover:shadow-elegant transition-all duration-300"
-              size="lg"
-            >
-              <Eye className="mr-2 h-5 w-5" />
-              Explore My Resume
-            </Button>
-          </div>
+              <div className="flex flex-wrap justify-center lg:justify-start gap-4">
+                <Button
+                  onClick={handleResumeDownload}
+                  className="bg-gradient-primary hover:shadow-elegant transition-all duration-300"
+                  size="lg"
+                >
+                  <Eye className="mr-2 h-5 w-5" />
+                  Explore My Resume
+                </Button>
+              </div>
 
-          <div className="flex space-x-4">
-            <Button variant="ghost" size="sm" asChild>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-                <Github className="h-5 w-5" />
-              </a>
-            </Button>
-            <Button variant="ghost" size="sm" asChild>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                <Linkedin className="h-5 w-5" />
-              </a>
-            </Button>
+              <div className="flex justify-center lg:justify-start space-x-4 mt-2">
+                <Button variant="ghost" size="sm" asChild>
+                  <a
+                    href="https://github.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Github className="h-5 w-5" />
+                  </a>
+                </Button>
+                <Button variant="ghost" size="sm" asChild>
+                  <a
+                    href="https://linkedin.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Linkedin className="h-5 w-5" />
+                  </a>
+                </Button>
+              </div>
+            </div>
+
+            {/* Right Image */}
+            <div className="relative flex justify-center mt-10 lg:mt-0 animate-slide-up">
+              <div className="relative w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 rounded-full overflow-hidden shadow-elegant bg-blue-50">
+                <img
+                  src={kirti_singla}
+                  alt="Professional workspace"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-primary/10"></div>
+              </div>
+            </div>
           </div>
         </div>
-
-        {/* Photo */}
-        <div className="relative animate-slide-up flex justify-center">
-          <div className="relative w-96 h-96 rounded-full overflow-hidden shadow-elegant">
-            <img 
-              src={kirti_singla} 
-              alt="Professional workspace" 
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-primary/10"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
+      </section>
 
 
       {/* About Section */}
