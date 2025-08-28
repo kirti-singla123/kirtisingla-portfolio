@@ -25,7 +25,7 @@ const Projects = () => {
     {
       title: "Glamour Haven – Salon Booking Website",
       description:
-        "A full-stack salon booking platform where customers can schedule services online and the admin can manage appointments via a secure dashboard. Includes booking confirmation, real-time updates, and automated WhatsApp notifications for rebooking suggestions.",
+        "A full-stack salon booking platform where customers can schedule services online and the admin can manage appointments via a secure dashboard. Includes booking confirmation, real-time updates, and automated WhatsApp notifications.",
       technologies: [
         "React",
         "Tailwind CSS",
