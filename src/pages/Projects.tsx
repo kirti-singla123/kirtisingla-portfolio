@@ -26,6 +26,13 @@ const Projects = () => {
       technologies: ["React", "JavaScript (ES6+)", "Bootstrap", "TMDB API", "React Context API", "LocalStorage", "HTML5", "CSS3"],
       liveUrl: "https://popcornplanet.netlify.app", 
       image: "/MovieHub.png"
+    },
+    {
+      title: "Glamour Haven – Salon Booking Website",
+      description: "A full-stack salon booking platform where customers can schedule services online and the admin can manage appointments via a secure dashboard. Includes booking confirmation, real-time updates, and automated WhatsApp notifications for rebooking suggestions.",
+      technologies: ["React", "Tailwind CSS", "Django", "Django REST Framework", "SQLite", "Render", "Netlify", "WhatsApp API"],
+      liveUrl: "https://glamourheaven.netlify.app",
+      image: "/GlamourHaven.png"
     }
   ];
 
