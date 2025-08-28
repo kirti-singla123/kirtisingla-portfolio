@@ -49,38 +49,32 @@ const Projects = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
           {projects.map((project) => (
             <Card
               key={project.title}
-              className="shadow-lg hover:shadow-2xl transition-shadow duration-300 rounded-2xl overflow-hidden group border border-gray-100"
+              className="shadow-lg hover:shadow-2xl transition-shadow duration-300 rounded-2xl overflow-hidden group border border-gray-100 flex flex-col"
             >
+              <div className="w-full h-56 overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={`${project.title} Screenshot`}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+
               <CardHeader className="pb-3 px-6 pt-6">
-                <div className="flex items-start justify-between">
-                  <div>
-                    <CardTitle className="text-2xl font-semibold mb-2 group-hover:text-teal-600 transition-colors">
-                      {project.title}
-                    </CardTitle>
-                    <CardDescription className="text-sm text-gray-700 leading-relaxed">
-                      {project.description}
-                    </CardDescription>
-                  </div>
-                </div>
+                <CardTitle className="text-2xl font-semibold mb-2 group-hover:text-teal-600 transition-colors">
+                  {project.title}
+                </CardTitle>
+                <CardDescription className="text-sm text-gray-700 leading-relaxed">
+                  {project.description}
+                </CardDescription>
               </CardHeader>
 
-              <CardContent className="space-y-5 px-6 pb-6">
-                {/* Project Image */}
-                <div className="rounded-xl overflow-hidden shadow-md group-hover:shadow-xl transition-shadow duration-300">
-                  <img
-                    src={project.image}
-                    alt={`${project.title} Screenshot`}
-                    className="w-full h-48 sm:h-56 md:h-52 object-contain"
-                    loading="lazy"
-                    decoding="async"
-                    fetchpriority="low"
-                  />
-                </div>
-
+              <CardContent className="space-y-5 px-6 pb-6 flex-grow flex flex-col justify-between">
                 {/* Technologies */}
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
@@ -95,7 +89,7 @@ const Projects = () => {
                 </div>
 
                 {/* Live Demo Button */}
-                <div className="flex gap-4 pt-3">
+                <div className="pt-3">
                   <Button
                     size="sm"
                     asChild
