@@ -14,6 +14,14 @@ const Projects = () => {
       featured: true
     },
     {
+      title: "Glamour Haven – Salon Booking Website",
+      description: "A full-stack salon booking platform where customers can schedule services online and the admin can manage appointments via a secure dashboard. Includes booking confirmation, real-time updates, and automated WhatsApp notifications for rebooking suggestions.",
+      technologies: ["React", "Tailwind CSS", "Django", "Django REST Framework", "SQLite", "Render", "Netlify", "WhatsApp API"],
+      liveUrl: "https://glamourheaven.netlify.app",
+      image: "/GlamourHaven.png",
+      featured: true
+    }
+    {
       title: "ToDoFlow – Task Management App",
       description: "A clean and responsive task management tool with real-time updates, task persistence via localStorage, and features for adding, completing, and deleting tasks.",
       technologies: ["React", "JavaScript (ES6+)", "HTML", "CSS", "LocalStorage", "React-router-dom"],
@@ -27,15 +35,7 @@ const Projects = () => {
       liveUrl: "https://popcornplanet.netlify.app", 
       image: "/MovieHub.png"
     },
-    {
-      title: "Glamour Haven – Salon Booking Website",
-      description: "A full-stack salon booking platform where customers can schedule services online and the admin can manage appointments via a secure dashboard. Includes booking confirmation, real-time updates, and automated WhatsApp notifications for rebooking suggestions.",
-      technologies: ["React", "Tailwind CSS", "Django", "Django REST Framework", "SQLite", "Render", "Netlify", "WhatsApp API"],
-      liveUrl: "https://glamourheaven.netlify.app",
-      image: "/GlamourHaven.png",
-      featured: true
-    }
-    
+        
   ];
 
   return (
