@@ -1,100 +1,119 @@
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { ExternalLink } from "lucide-react";
 
-const projects = [
-  {
-    title: "Portfolio Website",
-    description:
-      "A personal portfolio showcasing services, projects, and contact information. Built with React and Tailwind CSS, deployed on Netlify.",
-    image: "/projects/portfolio.png",
-    link: "https://your-portfolio.netlify.app",
-    featured: true,
-  },
-  {
-    title: "Glamour Heaven – Salon Booking App",
-    description:
-      "A full-stack salon booking platform with customer appointment management and an admin dashboard. Built with React (frontend) and Django (backend).",
-    image: "/projects/glamourheaven.png",
-    link: "https://glamourheaven.netlify.app",
-    featured: true,
-  },
-  {
-    title: "ToDoFlow – Task Management App",
-    description:
-      "A clean and responsive task management tool with real-time updates, task persistence via localStorage, and features for adding, completing, and deleting tasks.",
-    image: "/projects/todoflow.png",
-    link: "https://todoflow.netlify.app",
-    featured: false,
-  },
-  {
-    title: "MovieHub – Movie Explorer",
-    description:
-      "A movie discovery app integrating with a public API, featuring search, filters, and detailed movie pages. Built with React and styled with Tailwind CSS.",
-    image: "/projects/moviehub.png",
-    link: "https://moviehub.netlify.app",
-    featured: false,
-  },
-];
+const Projects = () => {
+  const projects = [
+    {
+      title: "Creamy – Ice Cream E-commerce Website",
+      description: "A Django-powered ice cream shop where users can browse flavors, manage their cart, and place orders. Includes secure authentication, product browsing, and a responsive Bootstrap design.",
+      technologies: ["Python", "Django", "HTML", "CSS", "JavaScript", "Bootstrap", "SQLite", "PayPal Sandbox"],
+      liveUrl: "https://creamy-com.onrender.com",
+      image: "/homepage.png"
+    },
+    {
+      title: "Glamour Haven – Salon Booking Website",
+      description: "A full-stack salon booking platform where customers can schedule services online and the admin can manage appointments via a secure dashboard. Includes booking confirmation, real-time updates, and automated WhatsApp notifications for rebooking suggestions.",
+      technologies: ["React", "Tailwind CSS", "Django", "Django REST Framework", "SQLite", "Render", "Netlify", "WhatsApp API"],
+      liveUrl: "https://glamourheaven.netlify.app",
+      image: "/GlamourHaven.png"
+    },
+    {
+      title: "ToDoFlow – Task Management App",
+      description: "A clean and responsive task management tool with real-time updates, task persistence via localStorage, and features for adding, completing, and deleting tasks.",
+      technologies: ["React", "JavaScript (ES6+)", "HTML", "CSS", "LocalStorage", "React-router-dom"],
+      liveUrl: "https://todoflow-six.vercel.app",
+      image: "/ToDo.png"
+    },
+    {
+      title: "MovieHub – React Movie Wishlist App",
+      description: "A modern and responsive movie discovery platform that lets users browse trending films from TMDB, add favorites to a wishlist, and persist selections using localStorage.",
+      technologies: ["React", "JavaScript (ES6+)", "Bootstrap", "TMDB API", "React Context API", "LocalStorage", "HTML5", "CSS3"],
+      liveUrl: "https://popcornplanet.netlify.app", 
+      image: "/MovieHub.png"
+    },
+  ];
 
-export default function Projects() {
   return (
-    <section id="projects" className="py-16 px-6 bg-white">
-      <div className="max-w-7xl mx-auto text-center mb-12">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">
-          Featured Projects
-        </h2>
-        <p className="text-gray-600">
-          A selection of projects I’ve worked on, ranging from full-stack apps
-          to frontend interfaces.
-        </p>
+    <div className="min-h-screen pt-16 bg-gray-50">
+      <div className="container mx-auto px-6 py-16">
+        {/* Heading */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl sm:text-5xl font-extrabold mb-3 bg-gradient-to-r from-teal-500 to-blue-600 bg-clip-text text-transparent">
+            Featured Projects
+          </h1>
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+            A showcase of my best work demonstrating various technologies and problem-solving approaches.
+          </p>
+        </div>
+
+        {/* Projects Grid */}
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          {projects.map((project) => (
+            <Card
+              key={project.title}
+              className="shadow-lg hover:shadow-2xl transition-shadow duration-300 rounded-2xl overflow-hidden group border border-gray-100"
+            >
+              <CardHeader className="pb-3 px-6 pt-6">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <CardTitle className="text-2xl font-semibold mb-2 group-hover:text-teal-600 transition-colors">
+                      {project.title}
+                    </CardTitle>
+                    <CardDescription className="text-sm text-gray-700 leading-relaxed">
+                      {project.description}
+                    </CardDescription>
+                  </div>
+                </div>
+              </CardHeader>
+
+              <CardContent className="space-y-5 px-6 pb-6">
+                {/* Project Image */}
+                <div className="rounded-xl overflow-hidden shadow-md group-hover:shadow-xl transition-shadow duration-300">
+                  <img
+                    src={project.image}
+                    alt={`${project.title} Screenshot`}
+                    className="w-full h-48 sm:h-56 md:h-52 object-contain"
+                    loading="lazy"
+                    decoding="async"
+                    fetchpriority="low"
+                  />
+                </div>
+
+                {/* Technologies */}
+                <div className="flex flex-wrap gap-2">
+                  {project.technologies.map((tech) => (
+                    <Badge
+                      key={tech}
+                      variant="outline"
+                      className="text-xs px-3 py-1 rounded-full border-gray-300 text-gray-700 hover:bg-gray-100 transition"
+                    >
+                      {tech}
+                    </Badge>
+                  ))}
+                </div>
+
+                {/* Live Demo Button */}
+                <div className="flex gap-4 pt-3">
+                  <Button
+                    size="sm"
+                    asChild
+                    className="bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700 shadow-md transition transform hover:-translate-y-0.5"
+                  >
+                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center">
+                      <ExternalLink className="h-5 w-5 mr-2" />
+                      Live Demo
+                    </a>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
       </div>
-
-      {/* Grid Layout */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {projects.map((project, idx) => (
-          <Card
-            key={idx}
-            className={`flex flex-col rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 ${
-              project.featured ? "md:col-span-2" : ""
-            }`}
-          >
-            {/* Image Section */}
-            <div className="h-64 w-full overflow-hidden">
-              <img
-                src={project.image}
-                alt={`${project.title} Screenshot`}
-                className="w-full h-full object-cover"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-
-            {/* Content */}
-            <CardContent className="flex-grow p-6">
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                {project.title}
-              </h3>
-              <p className="text-gray-600">{project.description}</p>
-            </CardContent>
-
-            {/* Footer */}
-            <CardFooter className="p-6 pt-0">
-              <Button
-                asChild
-                className="w-full bg-teal-600 text-white hover:bg-teal-700 transition-colors"
-              >
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View Project
-                </a>
-              </Button>
-            </CardFooter>
-          </Card>
-        ))}
-      </div>
-    </section>
+    </div>
   );
-}
+};
+
+export default Projects;
