@@ -33,6 +33,7 @@ const Projects = () => {
       technologies: ["React", "Tailwind CSS", "Django", "Django REST Framework", "SQLite", "Render", "Netlify", "WhatsApp API"],
       liveUrl: "https://glamourheaven.netlify.app",
       image: "/GlamourHaven.png"
+      featured: true
     }
     
   ];
