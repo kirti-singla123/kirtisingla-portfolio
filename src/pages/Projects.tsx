@@ -20,7 +20,7 @@ const Projects = () => {
       liveUrl: "https://glamourheaven.netlify.app",
       image: "/GlamourHaven.png",
       featured: true
-    }
+    },
     {
       title: "ToDoFlow – Task Management App",
       description: "A clean and responsive task management tool with real-time updates, task persistence via localStorage, and features for adding, completing, and deleting tasks.",
