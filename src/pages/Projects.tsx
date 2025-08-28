@@ -10,16 +10,14 @@ const Projects = () => {
       description: "A Django-powered ice cream shop where users can browse flavors, manage their cart, and place orders. Includes secure authentication, product browsing, and a responsive Bootstrap design.",
       technologies: ["Python", "Django", "HTML", "CSS", "JavaScript", "Bootstrap", "SQLite", "PayPal Sandbox"],
       liveUrl: "https://creamy-com.onrender.com",
-      image: "/homepage.png",
-      featured: true
+      image: "/homepage.png"
     },
     {
       title: "Glamour Haven – Salon Booking Website",
       description: "A full-stack salon booking platform where customers can schedule services online and the admin can manage appointments via a secure dashboard. Includes booking confirmation, real-time updates, and automated WhatsApp notifications for rebooking suggestions.",
       technologies: ["React", "Tailwind CSS", "Django", "Django REST Framework", "SQLite", "Render", "Netlify", "WhatsApp API"],
       liveUrl: "https://glamourheaven.netlify.app",
-      image: "/GlamourHaven.png",
-      featured: true
+      image: "/GlamourHaven.png"
     },
     {
       title: "ToDoFlow – Task Management App",
@@ -51,13 +49,11 @@ const Projects = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {projects.map((project, index) => (
             <Card
               key={project.title}
-              className={`shadow-lg hover:shadow-2xl transition-shadow duration-300 rounded-2xl overflow-hidden group border border-gray-100 ${
-                project.featured ? "lg:col-span-2" : ""
-              }`}
+              className="shadow-lg hover:shadow-2xl transition-shadow duration-300 rounded-2xl overflow-hidden group border border-gray-100"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardHeader className="pb-3 px-6 pt-6">
@@ -65,11 +61,6 @@ const Projects = () => {
                   <div>
                     <CardTitle className="text-2xl font-semibold mb-2 group-hover:text-teal-600 transition-colors">
                       {project.title}
-                      {project.featured && (
-                        <Badge className="ml-3 bg-gradient-to-r from-teal-400 to-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                          Featured
-                        </Badge>
-                      )}
                     </CardTitle>
                     <CardDescription className="text-sm text-gray-700 leading-relaxed">
                       {project.description}
@@ -84,7 +75,7 @@ const Projects = () => {
                   <img
                     src={project.image}
                     alt={`${project.title} Screenshot`}
-                    className="w-full h-auto object-contain"
+                    className="w-full h-48 sm:h-56 md:h-52 object-contain"
                     loading="lazy"
                     decoding="async"
                     fetchpriority="low"
