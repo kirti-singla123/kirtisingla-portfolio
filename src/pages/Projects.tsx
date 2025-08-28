@@ -18,6 +18,7 @@ const Projects = () => {
       description: "A full-stack salon booking platform where customers can schedule services online and the admin can manage appointments via a secure dashboard. Includes booking confirmation, real-time updates, and automated WhatsApp notifications for rebooking suggestions.",
       technologies: ["React", "Tailwind CSS", "Django", "Django REST Framework", "SQLite", "Render", "Netlify", "WhatsApp API"],
       liveUrl: "https://glamourheaven.netlify.app",
+      image: "/GlamourHaven.png",
       featured: true
     },
     {
@@ -78,12 +79,12 @@ const Projects = () => {
               </CardHeader>
 
               <CardContent className="space-y-5 px-6 pb-6">
-                {/* Project Image */}
-                <div className="rounded-xl overflow-hidden h-60 shadow-md group-hover:shadow-xl transition-shadow duration-300">
+                {/* Project Image - fully visible */}
+                <div className="rounded-xl overflow-hidden shadow-md group-hover:shadow-xl transition-shadow duration-300">
                   <img
                     src={project.image}
                     alt={`${project.title} Screenshot`}
-                    className="object-cover w-full h-full"
+                    className="w-full h-auto object-contain"
                     loading="lazy"
                     decoding="async"
                     fetchpriority="low"
