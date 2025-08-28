@@ -34,6 +34,7 @@ const Projects = () => {
       liveUrl: "https://glamourheaven.netlify.app",
       image: "/GlamourHaven.png"
     }
+    
   ];
 
   return (
