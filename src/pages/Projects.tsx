@@ -50,11 +50,10 @@ const Projects = () => {
 
         {/* Projects Grid */}
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <Card
               key={project.title}
               className="shadow-lg hover:shadow-2xl transition-shadow duration-300 rounded-2xl overflow-hidden group border border-gray-100"
-              style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardHeader className="pb-3 px-6 pt-6">
                 <div className="flex items-start justify-between">
@@ -70,7 +69,7 @@ const Projects = () => {
               </CardHeader>
 
               <CardContent className="space-y-5 px-6 pb-6">
-                {/* Project Image - fully visible */}
+                {/* Project Image */}
                 <div className="rounded-xl overflow-hidden shadow-md group-hover:shadow-xl transition-shadow duration-300">
                   <img
                     src={project.image}
