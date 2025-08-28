@@ -32,7 +32,7 @@ const Projects = () => {
       description: "A full-stack salon booking platform where customers can schedule services online and the admin can manage appointments via a secure dashboard. Includes booking confirmation, real-time updates, and automated WhatsApp notifications for rebooking suggestions.",
       technologies: ["React", "Tailwind CSS", "Django", "Django REST Framework", "SQLite", "Render", "Netlify", "WhatsApp API"],
       liveUrl: "https://glamourheaven.netlify.app",
-      image: "/GlamourHaven.png"
+      image: "/GlamourHaven.png",
       featured: true
     }
     
