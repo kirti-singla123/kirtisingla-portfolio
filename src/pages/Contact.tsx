@@ -55,7 +55,7 @@ const Contact = () => {
     {
       icon: <Phone className="h-5 w-5" />,
       label: "Phone",
-      value: "+1 (555) 123-4567",
+      value: ""Not displayed, call if needed"",
       href: "tel:+1(647)632-3011",
     },
     {
