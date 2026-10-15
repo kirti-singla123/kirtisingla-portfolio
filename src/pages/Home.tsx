@@ -17,12 +17,12 @@ const Home = () => {
                 Hi, I'm <span className="text-primary">Kirti Singla</span>
               </h1>
               <p className="text-lg sm:text-xl text-muted-foreground mt-4">
-                Full-Stack Developer & Problem Solver
+               AI Engineer
               </p>
               <p className="text-base sm:text-lg text-foreground leading-relaxed max-w-lg mx-auto lg:mx-0">
-                Dedicated Web Developer with expertise in React.js and Django.
-                Passionate about learning, problem-solving, and building
-                user-friendly applications.
+                 I build AI-powered applications, from RAG pipelines and chatbots to the APIs and React interfaces around them. 
+                  With nearly 5 years of software experience, 
+                  I work with Python, Django, React.js, LangChain, and MCP to turn ideas into reliable, user-friendly products.
               </p>
 
               <div className="flex justify-center lg:justify-start space-x-4 mt-2">
@@ -77,10 +77,10 @@ const Home = () => {
                   Background
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  I build web applications using React, Django, and SQL. I
-                  enjoy solving problems by writing clean and efficient code.
-                  I like working on projects that help users and make a
-                  difference.
+                  I’m an AI Engineer with nearly 5 years of software experience. 
+                  I’ve built AI chatbots with React and Django and worked on prompts and AI-assisted workflows. 
+                  In my projects, I build things like a RAG pipeline with LangChain and a local AI assistant using Ollama. 
+                  I work with Python, Django, React, and SQL, and I enjoy solving problems with clean, efficient code and building applications that help users.
                 </p>
               </Card>
 
@@ -89,8 +89,8 @@ const Home = () => {
                   What I'm Looking For
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  I am looking for a full-time job where I can learn new
-                  skills, work with a great team, and grow as a developer.
+                  I’m looking for a full-time AI Engineer role where I can build AI-powered products, such as chatbots and RAG applications, with a strong team. 
+                  I want to keep learning new tools and techniques and grow as an engineer..
                 </p>
               </Card>
             </div>
