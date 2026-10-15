@@ -6,20 +6,27 @@ import { ExternalLink } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "AIVA – Local AI Assistant",
-      description:
-        "A local AI chatbot with a real-time chat interface. It runs the Gemma model through Ollama, keeps context across multiple questions, and uses a Django backend with optimized API calls for faster responses.",
-      technologies: [
-        "Python",
-        "Django",
-        "React",
-        "Ollama",
-        "Gemma",
-        "Prompt Engineering",
-      ],
-      liveUrl: "https://aiva-local-ai-assistant.netlify.app/",
-      image: "/AIVA.png",
-    },
+  title: "AIVA – RAG-Based AI Assistant",
+  description:
+    "A full-stack AI assistant that answers questions from PDF documents using Retrieval-Augmented Generation. Documents are split into chunks, embedded with FastEmbed, and stored in a custom vector database. Questions are matched by cosine similarity, and the retrieved context goes to a Groq LLM to generate the answer. It started as a local Ollama and Gemma assistant. The React frontend runs on Netlify and the Django backend on Render.",
+  technologies: [
+    "Python",
+    "Django",
+    "Django REST Framework",
+    "React",
+    "RAG",
+    "Groq",
+    "FastEmbed",
+    "Vector Search",
+    "Prompt Engineering",
+    "Ollama",
+    "Gemma",
+    "Netlify",
+    "Render",
+  ],
+  liveUrl: "https://aiva-local-ai-assistant.netlify.app/",
+  image: "/AIVA.png",
+},
     {
       title: "Creamy – Ice Cream E-commerce Website",
       description:
