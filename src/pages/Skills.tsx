@@ -1,13 +1,25 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Code, Database, Globe, Wrench } from "lucide-react";
+import { Brain, Code, Database, Globe, Wrench } from "lucide-react";
 
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Frontend Development",
-      icon: <Globe className="h-6 w-6" />,
-      skills: ["HTML", "React.js", "Bootstrap", "Tailwind CSS"]
+      title: "AI & LLM Engineering",
+      icon: <Brain className="h-6 w-6" />,
+      featured: true,
+      skills: [
+        "RAG (Retrieval-Augmented Generation)",
+        "LangChain",
+        "Embeddings",
+        "Vector Databases",
+        "Prompt Engineering",
+        "AI Chatbot Workflows",
+        "Claude Code CLI",
+        "MCP (Model Context Protocol)",
+        "Ollama",
+        "Gemma"
+      ]
     },
     {
       title: "Backend Development",
@@ -15,12 +27,17 @@ const Skills = () => {
       skills: ["Python", "Django", "Django REST Framework (DRF)"]
     },
     {
+      title: "Frontend Development",
+      icon: <Globe className="h-6 w-6" />,
+      skills: ["React.js", "JavaScript", "HTML", "CSS", "Tailwind CSS", "Bootstrap"]
+    },
+    {
       title: "Database & ORM",
       icon: <Database className="h-6 w-6" />,
       skills: ["SQLite", "MySQL", "Django ORM"]
     },
     {
-      title: "API Communication",
+      title: "API Development & Testing",
       icon: <Globe className="h-6 w-6" />,
       skills: ["RESTful APIs", "Postman"]
     },
@@ -30,9 +47,9 @@ const Skills = () => {
       skills: ["Git", "GitHub"]
     },
     {
-      title: "Deployment",
+      title: "Deployment & CI/CD",
       icon: <Wrench className="h-6 w-6" />,
-      skills: ["Render", "Netlify", "Vercel"]
+      skills: ["CI/CD Pipelines", "Render", "Netlify", "Vercel"]
     },
     {
       title: "Tools & IDEs",
@@ -50,8 +67,9 @@ const Skills = () => {
             Technical Skills
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            A comprehensive overview of my technical expertise and the tools I
-            use to build modern web applications.
+            The AI tools, languages, and frameworks I use to build AI-powered
+            applications, from RAG pipelines and chatbots to the APIs and
+            interfaces around them.
           </p>
         </div>
 
@@ -60,7 +78,9 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <Card
               key={category.title}
-              className="p-6 shadow-md hover:shadow-lg border border-blue-100 transition-all duration-300 animate-fade-in group bg-white/80 backdrop-blur-sm"
+              className={`p-6 shadow-md hover:shadow-lg border border-blue-100 transition-all duration-300 animate-fade-in group bg-white/80 backdrop-blur-sm ${
+                category.featured ? "md:col-span-2 lg:col-span-2" : ""
+              }`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex items-center mb-4">
