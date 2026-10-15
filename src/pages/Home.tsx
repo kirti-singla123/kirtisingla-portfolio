@@ -1,12 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Eye, Github, Linkedin } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 import kirti_singla from "@/assets/kirti_singla.png";
 
 const Home = () => {
-  const handleResumeDownload = () => {
-    window.open("/Kirti_Resume_Canada.pdf", "_blank");
-  };
 
   return (
     <div className="min-h-screen pt-20">
@@ -27,17 +24,6 @@ const Home = () => {
                 Passionate about learning, problem-solving, and building
                 user-friendly applications.
               </p>
-
-              <div className="flex flex-wrap justify-center lg:justify-start gap-4">
-                <Button
-                  onClick={handleResumeDownload}
-                  className="bg-gradient-primary hover:shadow-elegant transition-all duration-300"
-                  size="lg"
-                >
-                  <Eye className="mr-2 h-5 w-5" />
-                  Explore My Resume
-                </Button>
-              </div>
 
               <div className="flex justify-center lg:justify-start space-x-4 mt-2">
                 <Button variant="ghost" size="sm" asChild>
