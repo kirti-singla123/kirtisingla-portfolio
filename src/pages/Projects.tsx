@@ -6,6 +6,21 @@ import { ExternalLink } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
+      title: "AIVA – Local AI Assistant",
+      description:
+        "A local AI chatbot with a real-time chat interface. It runs the Gemma model through Ollama, keeps context across multiple questions, and uses a Django backend with optimized API calls for faster responses.",
+      technologies: [
+        "Python",
+        "Django",
+        "React",
+        "Ollama",
+        "Gemma",
+        "Prompt Engineering",
+      ],
+      liveUrl: "https://aiva-local-ai-assistant.netlify.app/",
+      image: "/AIVA.png",
+    },
+    {
       title: "Creamy – Ice Cream E-commerce Website",
       description:
         "A Django-powered ice cream shop where users can browse flavors, manage their cart, and place orders. Includes secure authentication, product browsing, and a responsive Bootstrap design.",
@@ -128,24 +143,26 @@ const Projects = () => {
                   ))}
                 </div>
 
-                {/* Live Demo Button */}
-                <div className="flex gap-4 pt-3">
-                  <Button
-                    size="sm"
-                    asChild
-                    className="bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700 shadow-md transition transform hover:-translate-y-0.5"
-                  >
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center"
+                {/* Live Demo Button (only shown when the project has a live link) */}
+                {project.liveUrl && (
+                  <div className="flex gap-4 pt-3">
+                    <Button
+                      size="sm"
+                      asChild
+                      className="bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700 shadow-md transition transform hover:-translate-y-0.5"
                     >
-                      <ExternalLink className="h-5 w-5 mr-2" />
-                      Live Demo
-                    </a>
-                  </Button>
-                </div>
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center"
+                      >
+                        <ExternalLink className="h-5 w-5 mr-2" />
+                        Live Demo
+                      </a>
+                    </Button>
+                  </div>
+                )}
               </CardContent>
             </Card>
           ))}
